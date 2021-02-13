@@ -1,0 +1,15 @@
+{
+  "short_name": "Punch Lines",
+  "name": "Punch lines news headlines",
+  "icons": [
+    {
+      "src": "ListIcon.svg",
+      "sizes": "18x18",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4285F4",
+  "background_color": "#ffffff"
+}

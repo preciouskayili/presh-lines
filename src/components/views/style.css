@@ -1,0 +1,17 @@
+.hover:hover {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding-top: 10px;
+  background-color: rgba(204, 204, 204, 0.39);
+  transition: 0.4s ease-in-out;
+}
+.hover {
+  transition: 0.4s ease-out;
+}
+a:hover {
+  text-decoration: underline;
+}
+.nav-link {
+  transition: 0.4s ease-out;
+}
