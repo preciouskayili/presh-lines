@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ListIcon from "./ListIcon.svg";
 import { v4 as uuidv4 } from "uuid";
 
-const Weather = () => {
+const InTheNews = () => {
   const api = {
     base: "https://saurav.tech/NewsAPI/top-headlines/category/general/us.json",
   };
@@ -25,7 +25,7 @@ const Weather = () => {
         setLoadError(`${error}`);
         setIsLoaded(true);
       });
-  }, [isLoaded, api.base, headlines]);
+  });
 
   const newArray = headlines.splice(0, 10);
   return (
@@ -74,4 +74,4 @@ const Weather = () => {
   );
 };
 
-export default Weather;
+export default InTheNews;

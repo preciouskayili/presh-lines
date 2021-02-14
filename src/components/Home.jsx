@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./views/Card";
 import ErrorCard from "./views/ErrorCard";
-import Weather from "./Weather";
+import InTheNews from "./InTheNews";
 import Footer from "./Footer";
 import { NavLink } from "react-router-dom";
 
@@ -212,8 +212,10 @@ const Home = () => {
             Click <i className="fas fa-hand-pointer"></i> the search button to
             view search results. Clear the search bar to return to news
           </p>
-          {typeof searchResult === [] ? (
-            ""
+          {searchResult === [] ? (
+            <>
+              <h3>No search results</h3>
+            </>
           ) : (
             <>
               <p
@@ -253,7 +255,7 @@ const Home = () => {
             <div className="col-md-4 d-lg-block d-none">
               <div className="row">
                 <div className="col-md-12">
-                  <Weather />
+                  <InTheNews />
                 </div>
               </div>
             </div>

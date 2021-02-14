@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./views/Navbar";
 import Card from "./views/Card";
 import ErrorCard from "./views/ErrorCard";
-import Weather from "./Weather";
+import InTheNews from "./InTheNews";
 import Footer from "./Footer";
 
 const api = {
@@ -102,7 +102,7 @@ const TechNews = ({ location }) => {
             <div className="col-md-4">
               <div className="row">
                 <div className="col-md-12">
-                  <Weather />
+                  <InTheNews />
                 </div>
               </div>
             </div>
