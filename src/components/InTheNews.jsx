@@ -18,8 +18,6 @@ const InTheNews = () => {
       .then((data) => {
         setHeadlines(data.articles);
         setIsLoaded(true);
-        console.log(data);
-        console.log(headlines);
       })
       .catch((error) => {
         setLoadError(`${error}`);

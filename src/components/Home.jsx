@@ -94,7 +94,7 @@ const Home = () => {
             alt="Logo"
             style={{ marginRight: "7px" }}
           />
-          <small>Punch Lines</small>
+          <small>Presh Lines</small>
         </NavLink>
         <button
           className="navbar-toggler"
