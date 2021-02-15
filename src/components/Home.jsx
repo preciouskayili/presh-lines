@@ -154,7 +154,7 @@ const Home = () => {
                     margin: "0px 0px 0px 0px",
                   }}
                 >
-                  <form onSubmit={handleSubmit} autoComplete="off">
+                  <form onSubmit={handleSubmit} autoComplete="off" netlify>
                     <label htmlFor="search">Search</label>
                     <input
                       type="text"
