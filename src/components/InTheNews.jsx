@@ -44,7 +44,12 @@ const InTheNews = () => {
             <span>
               <img src={ListIcon} alt="List" />
             </span>
-            <a href={headline.url} style={{ textDecoration: "none" }}>
+            <a
+              href={headline.url}
+              style={{ textDecoration: "none" }}
+              rel="noreferrer"
+              target="_blank"
+            >
               <small className="text-dark p-2" style={{ fontWeight: "bolder" }}>
                 {headline.title}
               </small>
