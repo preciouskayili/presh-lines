@@ -97,21 +97,6 @@ const Navbar = ({ location }) => {
               </NavLink>
             </li>
           </ul>
-          <ul className="navbar-nav ml-auto">
-            <li
-              title="Reload"
-              className="nav-item waves-effect p-2 text-center hover"
-              onClick={() => window.location.reload(false)}
-              style={{
-                borderRadius: "50%",
-                height: "40px",
-                width: "40px",
-                paddingTop: "10px",
-              }}
-            >
-              <i className="fas fa-redo"></i>
-            </li>
-          </ul>
         </div>
       </nav>
     </>
