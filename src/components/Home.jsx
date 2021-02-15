@@ -10,15 +10,9 @@ const api = {
 };
 
 const Home = () => {
-  const [query, setQuery] = useState("");
-  const [staticQuery, setStaticQuery] = useState("");
-  const [searchResult, setSearchResult] = useState([]);
   const [news, setNews] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [reportError, setReportError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [searchError, setSearchError] = useState("");
-  const [display, setDisplay] = useState(false);
 
   const d = new Date();
   const days = [
@@ -64,9 +58,6 @@ const Home = () => {
         setReportError(`${error}`);
       });
   }, [isLoaded]);
-
-  
-  };
 
   return (
     <div>
@@ -136,9 +127,7 @@ const Home = () => {
                   style={{
                     margin: "0px 0px 0px 0px",
                   }}
-                >
-                  
-                </div>
+                ></div>
               </div>
             </li>
             <li
@@ -169,48 +158,8 @@ const Home = () => {
 
       {isLoaded === false ? (
         <>
-          <div className="spinner-border text-primary d-block mx-auto mt-5"></div>
+          <div className="spinner-border text-primary d-block mx-auto mt-5 mb-5"></div>
         </>
-      ) : (
-        ""
-      )}
-      {query !== "" ? (
-        <div className="container-fluid mt-5">
-          <p
-            className="text-center"
-            style={{ display: display ? "none" : "block" }}
-          >
-            Click <i className="fas fa-hand-pointer"></i> the search button to
-            view search results. Clear the search bar to return to news
-          </p>
-          {searchResult === [] ? (
-            <>
-              <h3>No search results</h3>
-            </>
-          ) : (
-            <>
-              <p
-                className="text-center"
-                style={{ display: display === true ? "block" : "none" }}
-              >
-                <i>Showing results for </i> "{staticQuery}"
-              </p>
-
-              {loading === true ? (
-                <div className="spinner-border text-primary d-block mx-auto mb-3"></div>
-              ) : (
-                ""
-              )}
-              {searchError === "" ? (
-                <>
-                  <Card articles={searchResult} />
-                </>
-              ) : (
-                <ErrorCard reportError={searchError} />
-              )}
-            </>
-          )}
-        </div>
       ) : (
         <div className="container-fluid mt-5">
           <div className="row">
@@ -233,11 +182,7 @@ const Home = () => {
           </div>
         </div>
       )}
-      {searchResult === [] ? (
-        <div className="card">
-          <div className="card-body">No search result</div>
-        </div>
-      ) : null}
+
       <Footer />
     </div>
   );
