@@ -65,24 +65,7 @@ const Home = () => {
       });
   }, [isLoaded]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    fetch(
-      `https://newsapi.org/v2/everything?q=${query}&language=en&apiKey=4fe0675a739c43e79090044972a0eed5`
-    )
-      .then((response) => response.json())
-      .then((result) => {
-        setLoading(false);
-        setStaticQuery(query);
-        setSearchResult(result.articles);
-        setDisplay(true);
-      })
-      .catch((error) => {
-        setLoading(false);
-        setSearchError(`${error}`);
-      });
+  
   };
 
   return (
@@ -154,19 +137,7 @@ const Home = () => {
                     margin: "0px 0px 0px 0px",
                   }}
                 >
-                  <form onSubmit={handleSubmit} autoComplete="off" netlify>
-                    <label htmlFor="search">Search</label>
-                    <input
-                      type="text"
-                      id="search"
-                      className="form-control"
-                      onChange={(e) => setQuery(e.target.value)}
-                      value={query}
-                    />
-                    <button className="btn btn-primary btn-sm waves-effect">
-                      <i className="fas fa-search"></i>
-                    </button>
-                  </form>
+                  
                 </div>
               </div>
             </li>
